@@ -11,4 +11,5 @@ RUN git clone --recursive https://github.com/YosysHQ/yosys.git
 WORKDIR /yosys
 RUN make config-gcc
 RUN make
-ENTRYPOINT ["./yosys"]
+WORKDIR /workdir
+ENTRYPOINT ["/yosys/yosys"]
